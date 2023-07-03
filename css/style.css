@@ -3,3 +3,11 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.text-red {
+    color: red;
+}
+
+.active {
+    font-size: 2rem;
+}

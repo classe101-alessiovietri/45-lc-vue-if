@@ -3,12 +3,70 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Template HTML CSS JS</title>
+        <title>Vue if</title>
 
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
+
+        <div id="app">
+            <h1 v-if="awesome">
+                Vue is awesome!
+            </h1>
+            <h1 v-else-if="altraFunz()">
+                Vue is altraFunz!
+            </h1>
+            <h1 v-else-if="swag || figo">
+                Vue is swag o figo!
+            </h1>
+            <h1 v-else>
+                Oh no 😢
+            </h1>
+
+            <div v-if="awesome">
+                <h1>
+                    Figo
+                </h1>
+                <p>
+                    Lorem ipsum dolor sit amet.
+                </p>
+                <div>
+                    <img src="" alt="">
+                    <button>
+                        Bottone
+                    </button>
+                </div>
+            </div>
+            
+            <p :class="studentsNumber > 30 ? 'text-red' : ''">
+                Ci sono {{ studentsNumber }} studenti
+            </p>
+
+            <div v-if="studentsNumber > 30">
+                CI SONO UN SACCO DI STUDENTI!
+            </div>
+            <div v-else>
+                Ci sono alcuni studenti
+            </div>
+
+            <div v-show="studentsNumber > 30">
+                CI SONO UN SACCO DI STUDENTI!
+            </div>
+            <div v-show="studentsNumber <= 30">
+                Ci sono alcuni studenti
+            </div>
+            
+            <div class="item" :class="checkIndex()">
+                SLIDE ATTIVA
+            </div>
+
+            <!-- <div>
+                <img v-if="post.author.image != null" :src="post.author.image" :alt="post.author.name">
+                <span v-else>NOME</span>
+            </div> -->
+        </div>
         
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
         <script src="js/scripts.js" type="text/javascript"></script>
     </body>
 </html>
